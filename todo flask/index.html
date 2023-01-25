@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <h1>To-Do List</h1>
+
+    <form method="POST" action="/">
+        <input type="text" name="content" placeholder="Add a new task...">
+        <input type="submit" value="Add">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Task</th>
+                <th>Date Created</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task.id }}</td>
+                <td>{{ task.content }}</td>
+                <td>{{ task.date_created }}</td>
+                <td>
+                    <a href="{{ url_for('update', id=task.id) }}">Update</a>
+                    <a href="{{ url_for('delete', id=task.id) }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
