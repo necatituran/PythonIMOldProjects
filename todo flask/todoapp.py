@@ -9,6 +9,7 @@ app = Flask(__name__)   # create an instance of the Flask class
 # configure the database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)        # create an instance of the SQLAlchemy class
+db.create_all()
 
 
 class Todo(db.Model):
