@@ -1,5 +1,5 @@
-'''create a to-do list app with flask and sqlite3'''
-from flask import Flask, render_template, request, redirect, url_for    # import the Flask class from the flask module
+# import the Flask class from the flask module
+from flask import Flask, render_template, request, redirect, url_for
 # import the SQLAlchemy class from the flask_sqlalchemy module
 from flask_sqlalchemy import SQLAlchemy
 # import the datetime class from the datetime module
@@ -78,5 +78,3 @@ def update(id):     # function to handle the update page
 if __name__ == "__main__":      # if this is the main module
 
     app.run(debug=True)     # run the app in debug mode
-
-'''create a to-do list app with flask and sqlite3'''
