@@ -4,12 +4,13 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 # import the datetime class from the datetime module
 from datetime import datetime
+from flask_migrate import Migrate
 
 app = Flask(__name__)   # create an instance of the Flask class
 # configure the database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)        # create an instance of the SQLAlchemy class
-db.create_all()
+migrate = Migrate(app, db)
 
 
 class Todo(db.Model):
