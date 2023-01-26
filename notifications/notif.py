@@ -6,6 +6,6 @@ if __name__ == "__main__":
         notification.notify(
             title="FULL FOCUS",
             message="NECO YOU CAN DO IT, THINK YOUR DREAMS",
-            timeout=10
+            timeout=3600
         )
         time.sleep(3600)
