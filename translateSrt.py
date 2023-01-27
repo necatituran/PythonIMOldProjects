@@ -6,8 +6,8 @@ from google.cloud import translate_v2 as translate
 client = translate.Client()
 
 # Define the input and output folders
-input_folder = 'path/to/input/folder'
-output_folder = 'path/to/output/folder'
+input_folder = 'M:\\18-01-2023\\U\\[FreeCoursesOnline.Me] PacktPub - Full Stack Web Development Bootcamp with React and Python [Video]'
+output_folder = 'M:\\18-01-2023\\U\\[FreeCoursesOnline.Me] PacktPub - Full Stack Web Development Bootcamp with React and Python [Video]\\tr subs'
 
 # Loop through all .srt files in the input folder
 for file in glob.glob(os.path.join(input_folder, '*.srt')):
