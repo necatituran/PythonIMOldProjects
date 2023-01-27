@@ -8,7 +8,6 @@ from tkinter.filedialog import askdirectory
 musicplayer = tkr.Tk()  # create a window
 musicplayer.title("Music Player")   # set the title of the window
 musicplayer.geometry("450x350")  # set the size of the window
-directory = askdirectory()  # ask the user to select a directory
 songlist = os.listdir()  # get the songs from the directory
 
 playlist = tkr.Listbox(musicplayer, font="Helvetica 12 bold",   # create a playlist
@@ -55,6 +54,8 @@ Button3 = tkr.Button(musicplayer, width=5, height=3, font="Helvetica 12 bold",
                      text="PAUSE", command=Pause, bg="purple", fg="white")
 Button4 = tkr.Button(musicplayer, width=5, height=3, font="Helvetica 12 bold",
                      text="UNPAUSE", command=Unpause, bg="orange", fg="white")
+Button5 = tkr.Button(musicplayer, width=5, height=3, font="Helvetica 12 bold",
+                     text="Choose File", command=askdirectory, bg="green", fg="white")
 
 var = tkr.StringVar()
 song_title = tkr.Label(
@@ -66,5 +67,6 @@ Button1.pack(fill="x")
 Button2.pack(fill="x")
 Button3.pack(fill="x")
 Button4.pack(fill="x")
+Button5.pack(fill="x")
 playlist.pack(fill="both", expand="yes")
 musicplayer.mainloop()
